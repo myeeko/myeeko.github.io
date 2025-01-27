@@ -2,16 +2,16 @@
 This is a quick guide for pulling and pushing changes to GitHub using the VS Code terminal. It’s mainly for my own reference, but if you find it useful, feel free to use it!
 ___
 
-- [Check if Git is installed](####Check-if-Git-is-installed)
-- [Set up user profile](####Set-up-user-profile)
-- [Set the default branch to main](####Set-the-default-branch-to-`main`)
-- [Initialise the repository](####Initialise-the-repository)
-- [Stage changes locally](####Stage-changes-locally)
-- [Commit changes to the repository locally](####Commit-changes-to-the-repository-locally)
-- [Push changes to GitHub](####Push-changes-to-GitHub)
-- [Pull changes from GitHub](####Pull-changes-from-GitHub)
-- [Add a .gitignore file](####Add-a-`.gitignore`-file)
-- [Shortcuts](####Shortcuts)
+- [Check if Git is installed](#Check-if-Git-is-installed)
+- [Set up user profile](#Set-up-user-profile)
+- [Set the default branch to main](#Set-the-default-branch-to-`main`)
+- [Initialise the repository](#Initialise-the-repository)
+- [Stage changes locally](#Stage-changes-locally)
+- [Commit changes to the repository locally](#Commit-changes-to-the-repository-locally)
+- [Push changes to GitHub](#Push-changes-to-GitHub)
+- [Pull changes from GitHub](#Pull-changes-from-GitHub)
+- [Add a .gitignore file](#Add-a-`.gitignore`-file)
+- [Shortcuts](#Shortcuts)
 
 ___
 #### Check if Git is installed
