@@ -1,84 +1,87 @@
-# myeeko.github.io
-
 ## Pull and Push GitHub from VS Code terminal
+This is a quick guide for pulling and pushing changes to GitHub using the VS Code terminal. It’s mainly for my own reference, but if you find it useful, feel free to use it!
 
-#### Check git installed
+#### Check if Git is installed
 ```
 git --version
 ```
 
-#### Setup user profile
+#### Set up user profile
 ```
-git config --global user.name ""
+git config --global user.name "Your Name"
 ```
 ```
-git config --global user.email ""
+git config --global user.email "your.email@example.com"
 ```
 
-#### Set branch to main
+#### Set the default branch to `main`
 ```
 git config --global init.defaultBranch main
 ```
 
-#### Initialise Repository
+#### Initialize the repository
 ```
 git init
 ```
 
-#### Add to queue locally
-for all modified files:
+#### Stage changes locally
+To add **all modified files**:
 ```
 git add .
 ```
-or for specific modified files:
+To add **specific files only**:
 ```
 git add index.html
 ```
 
-
-#### Commit to repository locally
+#### Commit changes to the repository locally
 ```
 git commit -m "Initial Commit"
 ```
 
-#### Push to Github
+#### Push changes to GitHub
+Set the remote repository:
 ```
-git remote add origin git@github.com:_____/_____.git
+git remote add origin git@github.com:<username>/<repository>.git
 ```
+Rename the branch to `main`:
 ```
 git branch -M main
 ```
-for first time commit:
+For the **first commit**:
 ```
 git push -u origin main
 ```
-have already pushed previously:
+For subsequent commits:
 ```
-git push 
+git push
 ```
 
-#### Pull from Github
+#### Pull changes from GitHub
 ```
 git pull
 ```
 
-#### Git Ignore
-1. have file .gitignore
-1. any files listed in .gitignore wont be pushed to GitHub
+#### Add a `.gitignore` file
+1. Create a file named `.gitignore`.
+2. Add filenames or patterns of files you want to exclude from being pushed to GitHub.
 
 #### Shortcuts
-shorter version of commands to commit all:
+To **commit all changes** with a message:
+```
+git commit -am "Your commit message"
+```
+Then push:
+```
+git push
+```
+To **stage specific files**, commit, and push:
+```
+git add index.html && git commit -m "Your commit message"
+```
+```
+git push
+```
 
-```
-git commit -am "message"
-```
-```
-git push
-```
-shorter version of commands to commit specific files which will intern have specific commit messages:
-```
-git add index.html && git commit -m "message"
-```
-```
-git push
-```
+#### Disclaimer
+While I’ve done my best to make this as helpful and reliable as possible, please remember that you’re using this at your own risk. I can’t guarantee everything will work perfectly, and I’m not responsible for any hiccups or issues that may arise along the way. I hope it helps, but always double-check and proceed with care. 🌟
