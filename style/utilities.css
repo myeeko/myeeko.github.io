@@ -26,6 +26,7 @@
   box-sizing: border-box;
   text-decoration: none;
   line-height: calc(1em + 0.5rem);
+  user-select: none;
 }
 
 html {
@@ -88,6 +89,16 @@ svg {
 @media (min-width: 1536px) {
   .container {
     max-width: 1536px;
+  }
+}
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1920px;
+  }
+}
+@media (min-width: 2560px) {
+  .container {
+    max-width: 2560px;
   }
 }
 

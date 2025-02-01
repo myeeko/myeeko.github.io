@@ -29,7 +29,6 @@
   box-shadow: red 0px 0px 10px;
 }
 
-
 .header__link:hover {
   scale: 110%;
 }
@@ -61,7 +60,6 @@
   }
 }
 
-
 @media (min-width: 1024px) {
   .header__menu {
     gap: 3em;
@@ -84,7 +82,22 @@
 }
 
 @media (min-height: 1536px) {
-    .header__link {
-      font-size: var(--size-2xl);
-    }
+  .header__link {
+    font-size: var(--size-2xl);
   }
+}
+@media (min-width: 2560px) {
+  .header__link {
+    font-size: 3rem;
+  }
+  .header__menu {
+    gap: 6em;
+  }
+  .header {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+  .header__menu li:nth-child(3) a {
+    padding: 0.5rem 2rem;
+  }
+}
