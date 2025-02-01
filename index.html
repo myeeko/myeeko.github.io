@@ -5,27 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Myeeko</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/utilities.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/hero.css">
+    <link rel="stylesheet" href="style/contactme.css">
+
 </head>
 
 <body>
-    <section class="hero">
-        <div class="wrapper">
+    <header class="header container">
+        <nav>
+            <ul class="header__menu">
+                <li><a class="header__link" href="#about">About</a></li>
+                <li><a class="header__link" href="#websites">Websites</a></li>
+                <li><a class="header__link" href="#contactme">Contact Me</a></li>
+                <li class="header__menu__open">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0" y1="10" x2="100" y2="10" />
+                        <line x1="0" y1="50" x2="100" y2="50" />
+                        <line x1="0" y1="90" x2="100" y2="90" />
+                    </svg>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero container">
             <h1>Myeeko</h1>
             <p>Online Media</p>
-        </div>
-    </section>
-    <section class="contact">
-        <div class="wrapper">
+        </section>
+        <div class="horizontalLine"></div>
+        <section id="contactme" class="contact container">
+            <p>I am contactable via social media using the link below:</p>
             <a href="https://x.com/MyeekoMedia">
                 <svg width="50" height="271" viewBox="0 0 300 271" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z" />
                 </svg>
-                <p>Contact Me</p>
+                <p>@MyeekoMedia</p>
             </a>
-        </div>
-    </section>
+        </section>
+        <div class="horizontalLine"></div>
+    </main>
+    <footer></footer>
 </body>
 
 </html>
