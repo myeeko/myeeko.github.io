@@ -7,6 +7,11 @@
 - [ ] responsive menu
 - [ ] standardised font sizing
 - [ ] standardised colour variables
+- [ ] combine the css files
+- [ ] have the important css files in style tags in the head section
+- [ ] head section: favicon
+- [ ] head section: meta tags
+- [ ] head section: description
 ---
 ### About Myeeko
 Myeeko is a dynamic hub for innovative web development, bringing together creative ideas and functional design under one umbrella. As a small startup, we focus on building engaging, scalable websites that showcase clean development and continuous improvement. Each project under Myeeko is an opportunity to refine skills, explore new technologies, and deliver meaningful digital experiences.
