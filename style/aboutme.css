@@ -1,0 +1,47 @@
+.about {
+  margin-bottom: 6rem;
+}
+
+.about h2 {
+  font-size: 2rem;
+  padding-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.about p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+  color: var(--clr-primary);
+}
+
+@media (min-width: 475px) {
+}
+
+@media (min-width: 640px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1280px) {
+}
+
+@media (min-width: 1536px) {
+  .about p {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1920px) {
+}
+@media (min-width: 2560px) {
+  .about p {
+    font-size: 4rem;
+    margin-top: 4rem;
+    line-height: 6rem;
+  }
+}
