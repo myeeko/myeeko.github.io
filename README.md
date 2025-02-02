@@ -1,6 +1,13 @@
 # Myeeko
 ## To Do List
-
+- [x] Complete a contactme section
+- [x] Complete a protfolio section
+- [x] Complete an about section
+- [ ] Make a README.md
+- [ ] add colour
+- [ ] responsive menu
+- [ ] standardised font sizing
+- [ ] standardised colour variables
 
 ---
 #### Disclaimer
