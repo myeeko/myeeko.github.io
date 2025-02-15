@@ -13,6 +13,13 @@
 - [ ] head section: meta tags
 - [ ] head section: description
 ---
+
+![image](https://github.com/user-attachments/assets/3335d613-c628-4725-bc70-71833410b2d7)
+
+https://pagespeed.web.dev/
+
+---
+
 ### About Myeeko
 Myeeko is a dynamic hub for innovative web development, bringing together creative ideas and functional design under one umbrella. As a small startup, we focus on building engaging, scalable websites that showcase clean development and continuous improvement. Each project under Myeeko is an opportunity to refine skills, explore new technologies, and deliver meaningful digital experiences.
 
