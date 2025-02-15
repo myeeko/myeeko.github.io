@@ -17,6 +17,7 @@
 - [ ] complete ad sizes
 - [ ] article - what goes in robots.txt
 - [ ] article - what goes in sitemap.xml
+- [ ] article - lighthouse accessibility
 - [ ] upload to google search for BOTs
 - [ ] accessibility - lighthouse
 - [ ] robots.txt
