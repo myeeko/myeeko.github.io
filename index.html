@@ -139,9 +139,9 @@
             --line_height: 1.6rem;
 
             /* Font Sizes */
-            --fontsize-h1: clamp(2rem, 5vw, 4rem);
+            --fontsize-h1: clamp(2rem, 5vw, 6rem);
             --fontsize-h2: clamp(1.5rem, 4vw, 2.75rem);
-            --fontsize-h3: clamp(1.25rem, 3.5vw, 2rem);
+            --fontsize-h3: clamp(1.25rem, 3.5vw, 1.8rem);
             --fontsize-h4: clamp(1.1rem, 3vw, 1.5rem);
             --fontsize-body: clamp(0.9375rem, 2vw, 1.25rem);
             --fontsize-small: clamp(0.8125rem, 1.8vw, 1.125rem);
@@ -188,6 +188,7 @@
         h3 {
             font-size: var(--fontsize-h3);
             line-height: var(--lineheight-h3);
+            padding-top: 1rem;
             padding-bottom: 1rem;
         }
 
@@ -213,7 +214,17 @@
         }
 
         li {
-            list-style: none;
+            list-style: disc;
+            margin-left: 2rem;
+        }
+
+        li p {
+            padding-bottom: 0rem;
+        }
+
+        li:last-child {
+            padding-bottom: 1rem;
+            
         }
 
         pre {
@@ -221,6 +232,7 @@
             padding-left: 0.5rem;
             user-select: all;
             overflow-x: auto;
+            margin-bottom: 2rem;
         }
 
         code {
@@ -234,7 +246,6 @@
         }
 
         section {
-            min-height: 80vh;
             border-bottom: 5px var(--clr-shade-dark) solid;
         }
 
@@ -244,7 +255,9 @@
             justify-content: center;
             align-items: center;
             background-color: var(--clr-black-light);
+            background-image: linear-gradient(to bottom, var(--clr-shade-dark)0%, var(--clr-black) 35%, var(--clr-black) 65%, var(--clr-shade-dark)100%);
             color: var(--clr-white);
+            min-height: 80vh;
         }
 
         section:last-child {
@@ -338,6 +351,15 @@
             line-height: var(--line_height);
         }
 
+        .left__nav li {
+            list-style: none;
+            margin-left: 0rem;
+        }
+        .left__nav li:hover{
+            scale: 102%;
+            /* background-color: white; */
+        }
+
         .responsive__nav {
             position: fixed;
             overflow-y: auto;
@@ -355,6 +377,12 @@
             padding-right: 1rem;
             line-height: calc(var(--line_height)*1.5);
             z-index: 10;
+        }
+
+        .responsive__nav li {
+            list-style: none;
+            margin-left: 0rem;
+            margin-bottom: 0.5rem;
         }
 
         .left__nav a {
@@ -538,7 +566,7 @@
                 <nav class="left__nav" id="nav__menu__container">
                     <ul>
                         <li>
-                            <h4><a href="#section1">HTML Headtags</a></h4>
+                            <h4><a href="#section1">Headtags</a></h4>
                         </li>
                         <li>
                             <h4><a href="#section2">Colour Assist</a></h4>
@@ -565,7 +593,7 @@
                     </section>
 
                     <section id="section1">
-                        <h2>HTML Headtags</h2>
+                        <h2>Headtags</h2>
                         <p>Ensuring your website is optimized for search engines and social media previews is crucial
                             for visibility. The following HTML snippet includes essential SEO meta tags, Open Graph
                             markup, and Twitter card settings to improve your site's indexing and appearance on
@@ -683,9 +711,8 @@
                         </p>
 
                         <h3>Website Performance Enhancements</h3>
-
+                        <p>For better user experience and performance, this snippet also includes:</p>
                         <ul>
-                            <p>For better user experience and performance, this snippet also includes:</p>
                             <li>
                                 <p>Canonical links to avoid duplicate content issues.</p>
                             </li>
@@ -700,17 +727,20 @@
                             discoverable, and visually appealing across different platforms. Whether you're launching a
                             new project or refining an existing site, this meta tag template is a must-have for modern
                             web development.</p>
-
+                        <p>Suggested SEO content inside the head tags developed from:</p>
                         <ul>
-                            <p>Suggested SEO content inside the head tags developed from:</p>
-                            <li><a rel="nofollow" target="_blank"
-                                    href="https://developers.facebook.com/docs/sharing/webmasters">
-                                    <p>https://developers.facebook.com/</p>
-                                </a></li>
-                            <li><a rel="nofollow" target="_blank"
-                                    href="https://developer.mozilla.org/en-US/docs/Web/Manifest">
-                                    <p>https://developer.mozilla.org/</p>
-                                </a></li>
+                            <li>
+                                <p><a rel="nofollow" target="_blank"
+                                        href="https://developers.facebook.com/docs/sharing/webmasters">
+                                        https://developers.facebook.com/
+                                    </a></p>
+                            </li>
+                            <li>
+                                <p><a rel="nofollow" target="_blank"
+                                        href="https://developer.mozilla.org/en-US/docs/Web/Manifest">
+                                        https://developer.mozilla.org/
+                                    </a></p>
+                            </li>
                         </ul>
                         <p>Just delete or comment out what you don't need / have.</p>
                     </section>
@@ -740,7 +770,7 @@
                             showcase clean development and continuous improvement. Each project under Myeeko is an
                             opportunity to
                             refine skills, explore new technologies, and deliver meaningful digital experiences.</p>
-                        <br>
+                        
                         <p>Our approach to web development is centered around usability, performance, and adaptability.
                             Whether
                             crafting sleek landing pages, interactive platforms, or content-rich websites, we emphasize
@@ -748,8 +778,8 @@
                             solutions that grow with evolving needs. By leveraging modern web technologies, we ensure
                             efficient,
                             high-quality builds that balance aesthetics with functionality.</p>
-                        <br>
-                        <p> Myeeko, we believe a well-structured website is more than just a digital presence - it's a
+                        
+                        <p> At Myeeko, we believe a well-structured website is more than just a digital presence - it's a
                             tool for
                             connection, innovation, and long-term growth. Our projects are designed with SEO best
                             practices in mind,
@@ -758,19 +788,20 @@
                             and strategic optimization, we aim to create websites that are not only visually appealing
                             but also
                             discoverable and impactful.</p>
-                        <br>
+                        
                         <p>As we continue expanding our portfolio, Myeeko remains committed to pushing the boundaries of
                             web
                             development, embracing new challenges, and building scalable solutions that stand the test
                             of time.</p>
-                        <br>
+                        
                         <p>I am contactable on social media via twitter: <a href="https://x.com/MyeekoMedia"
                                 target="_blank" rel="nofollow">@MyeekoMedia</a></p>
-                        <br>
+                        
                         <p>Kind Regards,</p>
+                        
+                        <p>Myeeko.</p>
                         <br>
-                        <p>Myeeko</p>
-                        <br>
+                        
                     </section>
                 </main>
             </div>
