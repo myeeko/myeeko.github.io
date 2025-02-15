@@ -1,134 +1,814 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-gb">
 
 <head>
+    <!-- Suggested SEO content inside the head tags developed from:..... -->
+    <!-- (1) https://developers.facebook.com/docs/sharing/webmasters -->
+    <!-- (2) https://developer.mozilla.org/en-US/docs/Web/Manifest -->
+    <!-- Just delete or comment out what you don't need / have. -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="preconnect"           href="//www.google-analytics.com"> -->
     <title>Myeeko</title>
-    <link rel="stylesheet" href="style/utilities.css">
-    <link rel="stylesheet" href="style/header.css">
-    <link rel="stylesheet" href="style/hero.css">
-    <link rel="stylesheet" href="style/contactme.css">
-    <link rel="stylesheet" href="style/portfolio.css">
-    <link rel="stylesheet" href="style/aboutme.css">
-    <link rel="stylesheet" href="style/footer.css">
+    <meta name="robots" content="index, follow">
+    <meta name="description"
+        content="A collection of reusable code snippets for web development. Copy, paste, and speed up your workflow with ready to use solutions.">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <!-- <link rel="canonical"            href="https://........github.io/"> -->
+
+    <!-- Style Sheets -->
+    <!-- <link rel="stylesheet"           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/style.css" type="text/css"> -->
+
+    <!-- Open Graph Markup Website -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:title"             content=".......... title of the website ............"> -->
+    <!-- <meta property="og:description"       content="........ description max 150 characters ............"> -->
+    <!-- <meta property="og:url"               content="https://..............github.io/"> -->
+    <!-- <meta property="og:site_name"         content="....... Website name ............."> -->
+    <!-- <meta property="og:see_also"          content="URL to recommended page number 1"> -->
+    <!-- <meta property="og:see_also"          content="URL to recommended page number 2"> -->
+
+    <!-- Open Graph Markup Image -->
+    <!-- <meta property="og:image"             content="https://.......jpg" /> -->
+    <!-- <meta property="og:image:secure_url"  content="https://.......jpg"> -->
+    <!-- <meta property="og:image:type"        content="image/jpeg"> -->
+    <!-- <meta property="og:image:width"       content=""> -->
+    <!-- <meta property="og:image:height"      content=""> -->
+
+    <!-- Open Graph Markup Video -->
+    <!-- <meta property="og:video"             content="https://.......mp4"> -->
+    <!-- <meta property="og:video:secure_url"  content="https://.......mp4"> -->
+    <!-- <meta property="og:video:type"        content="video/mp4."> -->
+    <!-- <meta property="og:video:width"       content=""> -->
+    <!-- <meta property="og:video:height"      content=""> -->
+    <!-- <meta property="og:image"             content=""> -->
+
+    <!-- Open Graph Markup Twitter -->
+    <!-- <meta name="twitter:card"             content="summary_large_image"> -->
+    <!-- <meta name="twitter:creator"          content="@............. twitter handle"> -->
+    <!-- <meta name="twitter:site"             content="@............. twitter handle"> -->
+    <!-- <meta name="twitter:title"            content="Title of your page"> -->
+    <!-- <meta name="twitter:url"              content="URL of your page"> -->
+    <!-- <meta name="twitter:domain"           content=".......... title of the website ............""> -->
+    <!-- <meta name="twitter:description"      content="Your description here"> -->
+    <!-- <meta name="twitter:image:src"        content="URL of image"> -->
+
+    <!-- Manifest -->
+    <!-- <link rel="manifest"                  href="manifest.json"> -->
+
+    <!-- Favicons -->
+    <!-- <link rel="icon" type="image/x-icon"  href="favicon.ico">             32px x 32px -->
+    <!-- <link rel="icon" type="image/png"     href="favicon.png">             1,024px × 1,024px ~12kb -->
+    <!-- <link rel="apple-touch-icon"          href="apple-touch-icon.png">    1,024px × 1,024px ~12kb -->
+    <!-- <link rel="mask-icon" color="#fff"    href="logo.svg"> -->
+
+    <!-- MS Application -->
+    <!-- <meta name="msapplication-TileColor"  content="##fff"> -->
+    <!-- <meta name="msapplication-TileImage"  content="/ms-icon-144x144.png"> 144px x 144px -->
+    <!-- <meta name="theme-color"              content="##fff">  -->
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navMenuHamburger = document.getElementById("nav__menu__hamburger");
+            const navMenu = document.getElementById("nav__menu__container");
+            const navLinks = navMenu.querySelectorAll("a"); // Select all links inside the menu
+
+            // Toggle the menu when clicking the hamburger
+            navMenuHamburger.addEventListener("click", function (event) {
+                event.stopPropagation(); // Prevents the document click event from firing immediately
+
+                if (navMenu.classList.contains("left__nav")) {
+                    navMenu.classList.remove("left__nav");
+                    navMenu.classList.add("responsive__nav");
+                } else {
+                    navMenu.classList.remove("responsive__nav");
+                    navMenu.classList.add("left__nav");
+                }
+            });
+
+            // Close the menu when clicking outside
+            document.addEventListener("click", function (event) {
+                if (!navMenu.contains(event.target) && !navMenuHamburger.contains(event.target)) {
+                    navMenu.classList.remove("responsive__nav");
+                    navMenu.classList.add("left__nav");
+                }
+            });
+
+            // Close the menu when a link is clicked
+            navLinks.forEach(link => {
+                link.addEventListener("click", function () {
+                    navMenu.classList.remove("responsive__nav");
+                    navMenu.classList.add("left__nav");
+                });
+            });
+        });
+    </script>
+    <!-- <script>
+    Google Analytics script goes here.
+    </script> -->
+
+    <style>
+        :root {
+            /* Colours */
+            --clr-black: #000000;
+            --clr-black-light: #222222;
+            --clr-white-dark: #eeeeee;
+            --clr-white: #ffffff;
+            --clr-shade-light: #a289ff;
+            --clr-shade: #663cff;
+            /* --clr-shade-dark: #3300ef; */
+            --clr-shade-dark: #8b0000;
+
+            /* Layout */
+            --maximum_width: 2000px;
+            --content_width: calc(100vw - var(--aside_width));
+            /* --left_navigation: 200px; */
+            /* --left_navigation: clamp(180px, 40vw, 250px); */
+            --left_navigation: 25ch;
+            --responsive_navigation: 300px;
+            --aside_width: 140px;
+
+            /* Ads */
+            --ad_width: 120px;
+            --ad_height: 600px;
+
+            /* Typography */
+            --line_height: 1.6rem;
+
+            /* Font Sizes */
+            --fontsize-h1: clamp(2rem, 5vw, 4rem);
+            --fontsize-h2: clamp(1.5rem, 4vw, 2.75rem);
+            --fontsize-h3: clamp(1.25rem, 3.5vw, 2rem);
+            --fontsize-h4: clamp(1.1rem, 3vw, 1.5rem);
+            --fontsize-body: clamp(0.9375rem, 2vw, 1.25rem);
+            --fontsize-small: clamp(0.8125rem, 1.8vw, 1.125rem);
+            --fontsize-nav_logo: clamp(1.25rem, 3.5vw, 2rem);
+
+            /* Line Heights */
+            --lineheight-h1: 1.2;
+            --lineheight-h2: 1.3;
+            --lineheight-h3: 1.4;
+            --lineheight-h4: 1.5;
+            --lineheight-body: 1.6;
+
+            /* Letter Spacing */
+            --letterspacing-h1: -0.02em;
+            --letterspacing-body: 0.02em;
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        h1 {
+            font-size: var(--fontsize-h1);
+            line-height: var(--lineheight-h1);
+            letter-spacing: var(--letterspacing-h1);
+        }
+
+        h2 {
+            font-size: var(--fontsize-h2);
+            line-height: var(--lineheight-h2);
+            color: var(--clr-shade-dark);
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: var(--fontsize-h3);
+            line-height: var(--lineheight-h3);
+            padding-bottom: 1rem;
+        }
+
+        h4 {
+            font-size: var(--fontsize-h4);
+            line-height: var(--lineheight-h4);
+        }
+
+        p {
+            font-size: var(--fontsize-body);
+            line-height: var(--lineheight-body);
+            letter-spacing: var(--letterspacing-body);
+            padding-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button {
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        pre {
+            border-left: var(--clr-shade-dark) solid 1rem;
+            padding-left: 0.5rem;
+            user-select: all;
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+        span code {
+            background-color: var(--clr-white-dark);
+            font-style: italic;
+            font-family: monospace;
+        }
+
+        section {
+            min-height: 80vh;
+            border-bottom: 5px var(--clr-shade-dark) solid;
+        }
+
+        section:first-child {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--clr-black-light);
+            color: var(--clr-white);
+        }
+
+        section:last-child {
+            border: none;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 0 auto;
+            background-color: var(--clr-white);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr var(--aside_width);
+            grid-template-rows: auto auto auto;
+            grid-template-areas:
+                "top__nav top__nav"
+                "main advertisement"
+                "footer footer";
+        }
+
+        .top__nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            grid-area: top__nav;
+            background: var(--clr-shade-dark);
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-top: 0.3rem;
+            padding-bottom: 0.3rem;
+        }
+
+        .top__nav a {
+            color: var(--clr-white);
+            font-weight: 600;
+            font-size: var(--fontsize-nav_logo)
+        }
+
+        .top__nav button {
+            /* width: 2rem; */
+            /* height: 1.8rem; */
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .top__nav button svg {
+            width: 120%;
+            height: 100%;
+        }
+
+        .top__nav button svg line {
+            stroke: var(--clr-white);
+            stroke-width: 12;
+        }
+
+        .content {
+            width: var(--content_width);
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "left__nav main"
+        }
+
+        main {
+            grid-area: main;
+            width: calc(var(--content_width) - var(--left_navigation));
+        }
+
+        .left__nav {
+            position: sticky;
+            overflow-y: auto;
+            top: 0;
+            grid-area: left__nav;
+            height: 80vh;
+            width: var(--left_navigation);
+            background-color: var(--clr-white-dark);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            line-height: var(--line_height);
+        }
+
+        .responsive__nav {
+            position: fixed;
+            overflow-y: auto;
+            right: 0;
+            top: 0;
+            height: 80vh;
+            width: var(--responsive_navigation);
+            background-color: var(--clr-white-dark);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            line-height: calc(var(--line_height)*1.5);
+            z-index: 10;
+        }
+
+        .left__nav a {
+            color: var(--clr-shade-dark);
+            font-weight: 300;
+        }
+
+        .left__nav .nav_logo {
+            font-size: var(--fontsize-nav_logo);
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .responsive__nav .nav_logo {
+            font-size: var(--fontsize-nav_logo);
+            text-align: center;
+            font-weight: 600;
+        }
+
+
+        aside {
+            grid-area: advertisement;
+            background: var(--clr-white-dark);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            width: var(--aside_width);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .advertisement {
+            height: var(--ad_height);
+            width: var(--ad_width);
+            border: 1px black solid;
+        }
+
+        .advertisement__container {
+            display: none;
+        }
+
+        section .advertisement {
+            display: none;
+        }
+
+        .advertisement:last-child {
+            position: sticky;
+            top: 0;
+        }
+
+
+        footer {
+            grid-area: footer;
+            background: var(--clr-black-light);
+            padding: 20px;
+        }
+
+        footer a {
+            color: var(--clr-white);
+        }
+
+        footer .copyright {
+            display: flex;
+            justify-content: center;
+            font-size: var(--fontsize-small);
+        }
+
+        @media (max-width: 1350px) {
+            aside {
+                display: none
+            }
+
+            :root {
+                --aside_width: 0px;
+            }
+
+            .advertisement__container {
+                display: flex;
+                justify-content: center;
+            }
+
+            section .advertisement {
+                display: block;
+                --ad_width: 970px;
+                --ad_height: 90px;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto;
+                grid-template-areas:
+                    "top__nav"
+                    "main"
+                    "footer";
+            }
+        }
+
+
+
+
+        @media (min-width: 2000px) {
+            :root {
+                --content_width: calc(var(--maximum_width) - var(--aside_width));
+            }
+
+        }
+
+        @media (max-width: 1200px) {
+            section .advertisement {
+                --ad_width: 780px;
+                --ad_height: 90px;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            section .advertisement {
+                --ad_width: 468px;
+                --ad_height: 60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .left__nav {
+                display: none;
+            }
+
+            #nav__menu__hamburger {
+                display: block;
+            }
+
+            .top__nav button {
+                width: 2rem;
+                height: 4rem;
+            }
+
+
+            main {
+                width: 100vw;
+            }
+        }
+
+        @media (max-width: 640px) {
+            section .advertisement {
+                --ad_width: 300px;
+                --ad_height: 250px;
+            }
+
+
+        }
+
+
+
+
+        @media (min-width: 1400px) {
+            :root {
+                --aside_width: 180px;
+                --ad_width: 160px;
+                --ad_height: 600px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <header class="header container">
-        <nav>
-            <ul class="header__menu">
-                <li><a class="header__link" href="#about">About</a></li>
-                <li><a class="header__link" href="#portfolio">Portfolio</a></li>
-                <li><a class="header__link" href="#contactme">Contact Me</a></li>
-                <li class="header__menu__open">
+
+    <div class="wrapper">
+        <div class="container">
+            <nav class="top__nav" id="top">
+                <a href="#">Myeeko</a>
+                <button id="nav__menu__hamburger">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                         <line x1="0" y1="10" x2="100" y2="10" />
                         <line x1="0" y1="50" x2="100" y2="50" />
                         <line x1="0" y1="90" x2="100" y2="90" />
                     </svg>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="hero container">
-            <h1>Myeeko</h1>
-            <p>Online Media</p>
-        </section>
-        <div class="horizontalLine"></div>
-        <section id="contactme" class="contact container">
-            <p>I am contactable via social media using the link below:</p>
-            <a href="https://x.com/MyeekoMedia" target="_blank" rel="nofollow">
-                <svg width="50" height="271" viewBox="0 0 300 271" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z" />
-                </svg>
-                <p>@MyeekoMedia</p>
-            </a>
-        </section>
-        <div class="horizontalLine"></div>
-        <section id="portfolio" class="container">
-            <h2>Portfolio</h2>
-            <div class="portfolio">
-                <div class="portfolio__card">
-                    <div class="image-container">
-                        <img src="img/Portfolio_Myeeko.png" alt="Screenshot of website's hero section">
-                    </div>
-                    <h3>https://myeeko.github.io/</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nobis placeat minus ab
-                        recusandae magnam delectus ex consequuntur dolor totam!</p>
-                    <button><a href="https://myeeko.github.io/" target="_blank">Visit Site</a></button>
-                </div>
-                <div class="portfolio__card">
-                    <div class="image-container">
-                        <img src="img/web2.png" alt="Screenshot of website's hero section">
-                    </div>
-                    <h3>Title of Site</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nobis placeat minus ab
-                        recusandae magnam delectus ex consequuntur dolor totam! Commodi nobis placeat minus ab
-                        recusandae magnam delectus ex consequuntur dolor totam!</p>
-                    <button><a href="#" target="_blank">Visit Site</a></button>
-                </div>
-                <div class="portfolio__card">
-                    <div class="image-container">
-                        <img src="img/web3.png" alt="Screenshot of website's hero section">
-                    </div>
-                    <h3>Title of Site</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nobis placeat.</p>
-                    <button><a href="#" target="_blank">Visit Site</a></button>
-                </div>
-                <div class="portfolio__card">
-                    <div class="image-container">
-                        <img src="img/web4.png" alt="Screenshot of website's hero section">
-                    </div>
-                    <h3>Title of Site</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nobis placeat minus ab
-                        recusandae magnam delectus!</p>
-                    <button><a href="#" target="_blank">Visit Site</a></button>
-                </div>
-                <div class="portfolio__card">
-                    <div class="image-container">
-                        <img src="img/web5.png" alt="Screenshot of website's hero section">
-                    </div>
-                    <h3>Title of Site</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nobis placeat minus ab
-                        recusandae magnam delectus ex consequuntur dolor totam recusandae magnam delectus ex
-                        consequuntur dolor totam!</p>
-                    <button><a href="#" target="_blank">Visit Site</a></button>
-                </div>
+                </button>
+            </nav>
+
+            <div class="content">
+                <nav class="left__nav" id="nav__menu__container">
+                    <ul>
+                        <li>
+                            <h4><a href="#section1">HTML Headtags</a></h4>
+                        </li>
+                        <li>
+                            <h4><a href="#section2">Colour Assist</a></h4>
+                        </li>
+                        <li>
+                            <h4><a href="#section3">Media Queries</a></h4>
+                        </li>
+                        <li>
+                            <h4><a href="#section4">Ad Sizes</a></h4>
+                        </li>
+                        <li>
+                            <h4><a href="#about">About</a></h4>
+                        </li>
+                    </ul>
+                    <a href="#top" class="nav_logo">Myeeko</a>
+                </nav>
+                <main>
+                    <section>
+                        <h1>Myeeko</h1>
+                        <p>Quick Snippets for Faster Development</p>
+                    </section>
+                    <section class="advertisement__container">
+                        <div class="advertisement">Advertisement</div>
+                    </section>
+
+                    <section id="section1">
+                        <h2>HTML Headtags</h2>
+                        <p>Ensuring your website is optimized for search engines and social media previews is crucial
+                            for visibility. The following HTML snippet includes essential SEO meta tags, Open Graph
+                            markup, and Twitter card settings to improve your site's indexing and appearance on
+                            platforms like Google, Facebook, and Twitter. Whether you're refining your website metadata
+                            or implementing a web manifest for progressive web apps, this template provides a solid
+                            foundation.</p>
+                        <br>
+
+                        <pre><code>&lt;!doctype html&gt;
+&lt;html lang="en-gb"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;!-- &lt;link rel="preconnect" href="//www.google-analytics.com"&gt; --&gt;
+
+    &lt;title&gt;.......... title of the website ............&lt;/title&gt;
+    &lt;meta name="robots" content="index, follow"&gt;
+    &lt;meta name="description" content="........ description max 150 characters ............"&gt;
+    &lt;meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"&gt;
+    &lt;meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"&gt;
+    &lt;link rel="canonical" href="https://........github.io/"&gt;
+
+    &lt;!-- Style Sheets --&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+    &lt;link rel="stylesheet" href="css/style.css" type="text/css"&gt;
+
+    &lt;!-- Open Graph Markup Website --&gt;
+    &lt;meta property="og:locale" content="en_US"&gt;
+    &lt;meta property="og:type" content="website"&gt;
+    &lt;meta property="og:title" content=".......... title of the website ............"&gt;
+    &lt;meta property="og:description" content="........ description max 150 characters ............"&gt;
+    &lt;meta property="og:url" content="https://..............github.io/"&gt;
+    &lt;meta property="og:site_name" content="....... Website name ............."&gt;
+    &lt;meta property="og:see_also" content="URL to recommended page number 1"&gt;
+    &lt;meta property="og:see_also" content="URL to recommended page number 2"&gt;
+
+    &lt;!-- Open Graph Markup Image --&gt;
+    &lt;meta property="og:image" content="https://.......jpg" /&gt;
+    &lt;meta property="og:image:secure_url" content="https://.......jpg"&gt;
+    &lt;meta property="og:image:type" content="image/jpeg"&gt;
+    &lt;meta property="og:image:width" content=""&gt;
+    &lt;meta property="og:image:height" content=""&gt;
+
+    &lt;!-- Open Graph Markup Video --&gt;
+    &lt;meta property="og:video" content="https://.......mp4"&gt;
+    &lt;meta property="og:video:secure_url" content="https://.......mp4"&gt;
+    &lt;meta property="og:video:type" content="video/mp4."&gt;
+    &lt;meta property="og:video:width" content=""&gt;
+    &lt;meta property="og:video:height" content=""&gt;
+    &lt;meta property="og:image" content=""&gt;
+
+    &lt;!-- Open Graph Markup Twitter --&gt;
+    &lt;meta name="twitter:card" content="summary_large_image"&gt;
+    &lt;meta name="twitter:creator" content="@............. twitter handle"&gt;
+    &lt;meta name="twitter:site" content="@............. twitter handle"&gt;
+    &lt;meta name="twitter:title" content="Title of your page"&gt;
+    &lt;meta name="twitter:url" content="URL of your page"&gt;
+    &lt;meta name="twitter:domain" content=".......... title of the website ............""&gt;
+    &lt;meta name=" twitter:description" content="Your description here"&gt;
+    &lt;meta name="twitter:image:src" content="URL of image"&gt;
+
+    &lt;!-- Manifest --&gt;
+    &lt;link rel="manifest" href="manifest.json"&gt;
+
+    &lt;!-- Favicons --&gt;
+    &lt;link rel="icon" type="image/x-icon" href="favicon.ico"&gt;  &lt;!-- 32px x 32px --&gt;
+    &lt;link rel="icon" type="image/png" href="favicon.png"&gt;     &lt;!-- 1,024px × 1,024px ~12kb --&gt;
+    &lt;link rel="apple-touch-icon" href="apple-touch-icon.png"&gt; &lt;!-- 1,024px × 1,024px ~12kb --&gt;
+    &lt;link rel="mask-icon" color="#fff" href="logo.svg"&gt;
+
+    &lt;!-- MS Application --&gt;
+    &lt;meta name="msapplication-TileColor" content="##fff"&gt;
+    &lt;meta name="msapplication-TileImage" content="/ms-icon-144x144.png"&gt;  &lt;!-- 144px x 144px --&gt;
+    &lt;meta name="theme-color" content="##fff"&gt;
+
+    &lt;!-- &lt;script&gt;Google Analytics script goes here.&lt;/script&gt; --&gt;
+
+&lt;/head&gt;</code></pre>
+
+
+
+                        <br>
+                        <p>When building a website, SEO metadata plays a key role in how search engines and social media
+                            platforms interpret your content. The
+                            <span><code>&lt;meta&gt;</code></span> tags included in this snippet help optimize your page
+                            for both search engine
+                            indexing
+                            and social media sharing.
+                        </p>
+
+                        <h3>Search Engine Optimization (SEO)</h3>
+
+                        <p>The
+                            <span><code>&lt;meta name="description"&gt;</code></span> tag provides a brief summary of
+                            your webpage, influencing
+                            how it
+                            appears in search results. Additionally, the
+                            <span><code>&lt;meta name="robots"&gt;</code></span> tag tells search engines whether to
+                            index your site and follow
+                            links,
+                            which can boost visibility.
+                        </p>
+
+                        <h3>Open Graph and Social Media Previews</h3>
+
+                        <p>Open Graph (OG) meta tags control how your site appears when shared on platforms like
+                            Facebook and LinkedIn. The
+                            <span><code>&lt;meta property="og:title"&gt;</code></span> and
+                            <span><code>&lt;meta property="og:description"&gt;</code></span> tags define the title and
+                            summary, while
+                            <span><code>&lt;meta property="og:image"&gt;</code></span> specifies the preview image.
+                            Similarly, Twitter Card meta
+                            tags
+                            optimize how your content looks when shared on Twitter.
+                        </p>
+
+                        <h3>Website Performance Enhancements</h3>
+
+                        <ul>
+                            <p>For better user experience and performance, this snippet also includes:</p>
+                            <li>
+                                <p>Canonical links to avoid duplicate content issues.</p>
+                            </li>
+                            <li>
+                                <p>Preconnect to Google Analytics for faster data tracking.</p>
+                            </li>
+                            <li>
+                                <p>Favicons and web manifest for branding and PWA compatibility.</p>
+                            </li>
+                        </ul>
+                        <p>By implementing these SEO best practices, you ensure your website is well-structured, easily
+                            discoverable, and visually appealing across different platforms. Whether you're launching a
+                            new project or refining an existing site, this meta tag template is a must-have for modern
+                            web development.</p>
+
+                        <ul>
+                            <p>Suggested SEO content inside the head tags developed from:</p>
+                            <li><a rel="nofollow" target="_blank"
+                                    href="https://developers.facebook.com/docs/sharing/webmasters">
+                                    <p>https://developers.facebook.com/docs/sharing/webmasters</p>
+                                </a></li>
+                            <li><a rel="nofollow" target="_blank"
+                                    href="https://developer.mozilla.org/en-US/docs/Web/Manifest">
+                                    <p>https://developer.mozilla.org/en-US/docs/Web/Manifest</p>
+                                </a></li>
+                        </ul>
+                        <p>Just delete or comment out what you don't need / have.</p>
+                    </section>
+                    <section id="section2">
+                        <h2>Colour Assist</h2>
+                        <p></p>
+                    </section>
+                    <section id="section3">
+                        <h2>Media Queries</h2>
+                        <p></p>
+                    </section>
+                    <section class="advertisement__container">
+                        <div class="advertisement">Advertisement</div>
+                    </section>
+                    <section id="section4">
+                        <h2>Ad Sizes</h2>
+                        <p></p>
+                    </section>
+
+
+                    <section id="about">
+                        <h2>About</h2>
+                        <p>Myeeko is a dynamic hub for innovative web development, bringing together creative ideas and
+                            functional
+                            design under one umbrella. As a small startup, we focus on building engaging, scalable
+                            websites that
+                            showcase clean development and continuous improvement. Each project under Myeeko is an
+                            opportunity to
+                            refine skills, explore new technologies, and deliver meaningful digital experiences.</p>
+                        <br>
+                        <p>Our approach to web development is centered around usability, performance, and adaptability.
+                            Whether
+                            crafting sleek landing pages, interactive platforms, or content-rich websites, we emphasize
+                            scalable
+                            solutions that grow with evolving needs. By leveraging modern web technologies, we ensure
+                            efficient,
+                            high-quality builds that balance aesthetics with functionality.</p>
+                        <br>
+                        <p> Myeeko, we believe a well-structured website is more than just a digital presence - it's a
+                            tool for
+                            connection, innovation, and long-term growth. Our projects are designed with SEO best
+                            practices in mind,
+                            enhancing visibility and reach while delivering a seamless user experience. Through
+                            thoughtful coding
+                            and strategic optimization, we aim to create websites that are not only visually appealing
+                            but also
+                            discoverable and impactful.</p>
+                        <br>
+                        <p>As we continue expanding our portfolio, Myeeko remains committed to pushing the boundaries of
+                            web
+                            development, embracing new challenges, and building scalable solutions that stand the test
+                            of time.</p>
+                        <br>
+                        <p>I am contactable on social media via twitter: <a href="https://x.com/MyeekoMedia"
+                                target="_blank" rel="nofollow">@MyeekoMedia</a></p>
+                        <br>
+                        <p>Kind Regards,</p>
+                        <br>
+                        <p>Myeeko</p>
+                        <br>
+                    </section>
+                </main>
             </div>
-        </section>
-        <div class="horizontalLine"></div>
-        <section id="about" class="about container">
 
-            <h2>About</h2>
-            <p>Myeeko is a dynamic hub for innovative web development, bringing together creative ideas and functional
-                design under one umbrella. As a small startup, we focus on building engaging, scalable websites that
-                showcase clean development and continuous improvement. Each project under Myeeko is an opportunity to
-                refine skills, explore new technologies, and deliver meaningful digital experiences.</p>
+            <aside>
+                <div class="advertisement">Advertisement</div>
+                <div class="advertisement">Advertisement</div>
+            </aside>
 
-            <p>Our approach to web development is centered around usability, performance, and adaptability. Whether
-                crafting sleek landing pages, interactive platforms, or content-rich websites, we emphasize scalable
-                solutions that grow with evolving needs. By leveraging modern web technologies, we ensure efficient,
-                high-quality builds that balance aesthetics with functionality.</p>
+            <footer>
+                <a href="#top">
+                    <h3>Myeeko</h3>
+                </a>
+                <a class="copyright" target="_blank" href="https://myeeko.github.io/">Copyright &copy; Myeeko 2025</a>
+            </footer>
+        </div>
+    </div>
 
-            <p> Myeeko, we believe a well-structured website is more than just a digital presence - it's a tool for
-                connection, innovation, and long-term growth. Our projects are designed with SEO best practices in mind,
-                enhancing visibility and reach while delivering a seamless user experience. Through thoughtful coding
-                and strategic optimization, we aim to create websites that are not only visually appealing but also
-                discoverable and impactful.</p>
-
-            <p>As we continue expanding our portfolio, Myeeko remains committed to pushing the boundaries of web
-                development, embracing new challenges, and building scalable solutions that stand the test of time.</p>
-            <p>Kind Regards,</p>
-            <p>Myeeko</p>
-        </section>
-        <div class="horizontalLine"></div>
-    </main>
-    <footer class="container">
-        <a href="https://myeeko.github.io/" target="_blank">Copyright © 2025 Meeyko</a>
-    </footer>
 </body>
 
 </html>
+
+
+<!-- media (min-width: 475px) {}  -->
+<!-- media (min-width: 640px) {}  -->
+<!-- media (min-width: 768px) {}  -->
+<!-- media (min-width: 1024px) {} -->
+<!-- media (min-width: 1280px) {} -->
+<!-- media (min-width: 1536px) {} -->
+<!-- media (min-width: 1920px) {} -->
+<!-- media (min-width: 2560px) {} -->
+
+
+
+<!-- Advertising ------------------- -->
+<!-- Large leaderboard: 970 x 90 pixels -->
+<!-- Leaderboard: 728 x 90 pixels -->
+<!-- Banner: 468 x 60 pixels -->
+<!-- Large rectangle: 336 x 280 pixels -->
+<!-- Inline rectangle: 300 x 250 pixels -->
+<!-- Skyscraper: 120 x 600 pixels -->
+<!-- Wide skyscraper: 160 x 600 pixels -->
