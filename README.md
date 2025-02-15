@@ -18,6 +18,8 @@
 - [ ] article - what goes in robots.txt
 - [ ] article - what goes in sitemap.xml
 - [ ] article - lighthouse accessibility
+- [ ] article - https://www.minifier.org/
+- [ ] article - Markdown
 - [ ] upload to google search for BOTs
 - [ ] accessibility - lighthouse
 - [ ] robots.txt
