@@ -25,7 +25,7 @@
 - [ ] hidden files research
 ---
 
-![image](https://github.com/user-attachments/assets/3335d613-c628-4725-bc70-71833410b2d7)
+![image](https://github.com/user-attachments/assets/54ea891c-8de2-4c0a-94b2-cde72423443e)
 
 https://pagespeed.web.dev/
 
