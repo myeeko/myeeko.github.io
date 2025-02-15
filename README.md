@@ -1,17 +1,27 @@
 # Myeeko
-- [x] Complete a contact section
-- [x] Complete a protfolio section
-- [x] Complete an about section
+- [x] Complete a hero section
+- [x] Complete a about section
+- [x] Complete a footer section
+- [x] Complete a first article section
 - [x] Make a README.md
-- [ ] add colour
-- [ ] responsive menu
-- [ ] standardised font sizing
-- [ ] standardised colour variables
-- [ ] combine the css files
-- [ ] have the important css files in style tags in the head section
+- [x] add colour
+- [x] responsive menu
+- [x] standardised font sizing
+- [x] standardised colour variables
 - [ ] head section: favicon
-- [ ] head section: meta tags
-- [ ] head section: description
+- [x] head section: meta tags
+- [x] head section: description
+- [ ] complete head meta
+- [ ] complete colour
+- [ ] complete media query
+- [ ] complete ad sizes
+- [ ] article - what goes in robots.txt
+- [ ] article - what goes in sitemap.xml
+- [ ] upload to google search for BOTs
+- [ ] accessibility - lighthouse
+- [ ] robots.txt
+- [ ] sitemap.xml
+- [ ] hidden files research
 ---
 
 ![image](https://github.com/user-attachments/assets/3335d613-c628-4725-bc70-71833410b2d7)
