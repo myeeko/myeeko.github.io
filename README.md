@@ -8,7 +8,7 @@
 - [x] responsive menu
 - [x] standardised font sizing
 - [x] standardised colour variables
-- [ ] head section: favicon
+- [x] head section: favicon
 - [x] head section: meta tags
 - [x] head section: description
 - [x] article - headtags
