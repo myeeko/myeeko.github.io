@@ -21,11 +21,12 @@
 - [ ] article - lighthouse accessibility
 - [ ] article - https://www.minifier.org/
 - [ ] article - Markdown
+- [ ] article .htaccess
 - [ ] upload to google search for BOTs
 - [ ] accessibility - lighthouse
 - [ ] robots.txt
 - [ ] sitemap.xml
-- [ ] hidden files research
+- [ ] .htaccess
 ---
 
 ![image](https://github.com/user-attachments/assets/54ea891c-8de2-4c0a-94b2-cde72423443e)
