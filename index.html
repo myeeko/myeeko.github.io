@@ -20,7 +20,7 @@
 
     <!-- Style Sheets -->
     <!-- <link rel="stylesheet"           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-    <!-- <link rel="stylesheet" href="css/style.css" type="text/css"> -->
+    <link rel="stylesheet" href="css/colour.css" type="text/css">
 
     <!-- Open Graph Markup Website -->
     <meta property="og:locale" content="en_US">
@@ -106,6 +106,7 @@
             });
         });
     </script>
+    <script defer src="js/colour.js"></script>
     <!-- <script>
     Google Analytics script goes here.
     </script> -->
@@ -125,8 +126,6 @@
             /* Layout */
             --maximum_width: 2000px;
             --content_width: calc(100vw - var(--aside_width));
-            /* --left_navigation: 200px; */
-            /* --left_navigation: clamp(180px, 40vw, 250px); */
             --left_navigation: 25ch;
             --responsive_navigation: 300px;
             --aside_width: 140px;
@@ -144,7 +143,7 @@
             --fontsize-h3: clamp(1.25rem, 3.5vw, 1.8rem);
             --fontsize-h4: clamp(1.1rem, 3vw, 1.5rem);
             --fontsize-body: clamp(0.9375rem, 2vw, 1.25rem);
-            --fontsize-small: clamp(0.8125rem, 1.8vw, 1.125rem);
+            --fontsize-small: clamp(0.8125rem, 1.8vw, 1.0rem);
             --fontsize-nav_logo: clamp(1.25rem, 3.5vw, 2rem);
 
             /* Line Heights */
@@ -224,7 +223,7 @@
 
         li:last-child {
             padding-bottom: 1rem;
-            
+
         }
 
         pre {
@@ -237,6 +236,9 @@
 
         code {
             font-family: monospace;
+            font-size: var(--fontsize-small);
+            /* line-height: var(--lineheight-body); */
+            /* letter-spacing: var(--letterspacing-body); */
         }
 
         span code {
@@ -355,7 +357,8 @@
             list-style: none;
             margin-left: 0rem;
         }
-        .left__nav li:hover{
+
+        .left__nav li:hover {
             scale: 102%;
             /* background-color: white; */
         }
@@ -545,6 +548,7 @@
             }
         }
     </style>
+
 </head>
 
 <body>
@@ -743,10 +747,87 @@
                             </li>
                         </ul>
                         <p>Just delete or comment out what you don't need / have.</p>
+                        <br>
                     </section>
                     <section id="section2">
                         <h2>Colour Assist</h2>
-                        <p></p>
+                        <p>Colour plays a crucial role in web design, influencing user experience, branding, and
+                            accessibility. The right colour scheme can make your website visually appealing, improve
+                            readability, and enhance engagement. Whether you're aiming for a minimalist look, a fun and
+                            vibrant palette, or high-contrast accessibility, understanding colour theory helps you
+                            create
+                            a balanced and effective design.</p>
+                        <p>Below, you can explore the colour wheel and see how colours interact. Select a colour to view
+                            it alongside two complementary colours, helping you refine your choices for a balanced and
+                            visually appealing design. The generated CSS variables are displayed below, allowing you to
+                            easily copy and use them in your own website for consistent styling.</p>
+
+                        <div class="colour__assist__container">
+                            <div class="tableColourWheel">
+                                <div class="color-wheel-container">
+                                    <canvas id="colorWheelCanvas" class="color-wheel"></canvas>
+                                </div>
+                            </div>
+                            <div class="tableOutputContainer">
+                                <div class="flex">
+                                    <div class="tableOutputContainer__colourBox">
+                                        <div class="colourBox" id="c1"></div>
+                                        <div class="colourBox" id="c2"></div>
+                                        <div class="colourBox" id="c3"></div>
+                                    </div>
+                                    <div class="tableOutputContainer__colourValues">
+                                        <div class="colourValues" id="displayColorValueLight">#ddacff</div>
+                                        <div class="colourValues" id="displayColorValue">#be5fff</div>
+                                        <div class="colourValues" id="displayColorValueDark">#9f12ff</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tableOutputContainer__value">
+                            <pre><code class="displayCode" id="displayCode">:root {
+    --clr-black: #000000;
+    --clr-black-light: #222222;
+    --clr-white-dark: #eeeeee;
+    --clr-white: #ffffff;
+    --clr-comp1: #ff9d30;
+    --clr-main: #3530ff;
+    --clr-comp2: #92ff30;
+    }</code></pre>
+                        </div>
+                        <h3>The Psychology of Colour in Web Design</h3>
+                        <p>Colours evoke emotions and shape how visitors perceive your brand. Blue often conveys trust
+                            and professionalism, making it popular for corporate websites. Warm colours like red and
+                            orange create energy and urgency, which is why they are often used in call-to-action
+                            buttons. Green is associated with nature and growth, making it ideal for eco-friendly
+                            brands. Understanding these associations allows you to align your website colours with your
+                            brand's message.</p>
+                        <h3>Accessibility and Readability</h3>
+                        <p>A good colour scheme isn't just about aesthetics, it should be accessible to all users. Poor
+                            contrast between text and background can make content difficult to read, especially for
+                            users with visual impairments. To improve readability, aim for high-contrast text, avoid
+                            pure white backgrounds that cause eye strain, and ensure that colour isn't the only way to
+                            convey information. Using tools like contrast checkers and following WCAG guidelines can
+                            help you create a more inclusive design.</p>
+                        <h3>Minimal vs. Vibrant Colour Schemes</h3>
+                        <p>Minimalist colour schemes use a limited palette, often featuring neutral tones with subtle
+                            accent colours. This approach creates a clean, modern look and keeps the focus on content.
+                            In contrast, vibrant colour schemes use multiple bold colours to create energy and
+                            excitement. While vibrant designs can be visually striking, overusing colours can overwhelm
+                            users. Striking a balance between minimalism and vibrancy ensures a visually appealing
+                            experience.</p>
+                        <h3>Creating Harmonious Colour Combinations</h3>
+                        <p>Choosing the right colour combinations ensures a visually cohesive design. Complementary
+                            colours (opposites on the colour wheel) create contrast and make elements stand out.
+                            Analogous colours (next to each other on the colour wheel) create harmony and are often used
+                            for a softer, unified look. Monochromatic schemes, which use variations of a single colour,
+                            can be elegant and sophisticated. Testing different combinations helps find the perfect
+                            balance for your website.</p>
+                        <h3>Optimizing Colours for Engagement</h3>
+                        <p>Colours influence user behavior and interaction. Strategic use of colour can guide visitors'
+                            attention, highlight important sections, and encourage clicks. Call-to-action buttons should
+                            contrast with the background to stand out. Using a consistent colour scheme across your
+                            website enhances brand recognition and user trust.</p>
+                        <br>
                     </section>
                     <section id="section3">
                         <h2>Media Queries</h2>
@@ -770,7 +851,7 @@
                             showcase clean development and continuous improvement. Each project under Myeeko is an
                             opportunity to
                             refine skills, explore new technologies, and deliver meaningful digital experiences.</p>
-                        
+
                         <p>Our approach to web development is centered around usability, performance, and adaptability.
                             Whether
                             crafting sleek landing pages, interactive platforms, or content-rich websites, we emphasize
@@ -778,8 +859,9 @@
                             solutions that grow with evolving needs. By leveraging modern web technologies, we ensure
                             efficient,
                             high-quality builds that balance aesthetics with functionality.</p>
-                        
-                        <p> At Myeeko, we believe a well-structured website is more than just a digital presence - it's a
+
+                        <p> At Myeeko, we believe a well-structured website is more than just a digital presence - it's
+                            a
                             tool for
                             connection, innovation, and long-term growth. Our projects are designed with SEO best
                             practices in mind,
@@ -788,20 +870,20 @@
                             and strategic optimization, we aim to create websites that are not only visually appealing
                             but also
                             discoverable and impactful.</p>
-                        
+
                         <p>As we continue expanding our portfolio, Myeeko remains committed to pushing the boundaries of
                             web
                             development, embracing new challenges, and building scalable solutions that stand the test
                             of time.</p>
-                        
+
                         <p>I am contactable on social media via twitter: <a href="https://x.com/MyeekoMedia"
                                 target="_blank" rel="nofollow">@MyeekoMedia</a></p>
-                        
+
                         <p>Kind Regards,</p>
-                        
+
                         <p>Myeeko.</p>
                         <br>
-                        
+
                     </section>
                 </main>
             </div>
