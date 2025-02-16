@@ -11,10 +11,10 @@
 - [ ] head section: favicon
 - [x] head section: meta tags
 - [x] head section: description
-- [ ] complete head meta
-- [ ] complete colour
-- [ ] complete media query
-- [ ] complete ad sizes
+- [x] article - headtags
+- [x] article - colour assist
+- [ ] article - media query
+- [ ] article - ad sizes
 - [ ] article - what goes in robots.txt
 - [ ] article - what goes in sitemap.xml
 - [ ] article - lighthouse accessibility
