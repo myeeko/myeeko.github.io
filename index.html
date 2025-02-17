@@ -240,10 +240,15 @@
             background-color: var(--clr-white-dark);
             font-style: italic;
             font-family: monospace;
+            padding-left: 0.3rem;
+            padding-right: 0.3rem;
+            font-size: inherit;
         }
 
         section {
             border-bottom: 5px var(--clr-shade-dark) solid;
+            margin-top: 2rem;
+            padding-bottom: 2rem;
         }
 
         section:first-child {
@@ -849,15 +854,105 @@
                         <br>
                     </section>
                     <section id="section3">
-                        <h2>Media Queries</h2>
-                        <p></p>
+                        <h2>Media Queries: Creating a Responsive HTML Website</h2>
+                        <p>In modern web design, media queries are essential for making websites responsive across
+                            different screen sizes. They allow developers to apply specific CSS rules based on a user's
+                            device, ensuring a seamless experience on mobile, tablet, and desktop. By using media
+                            queries effectively, HTML website builders can create layouts that adapt dynamically,
+                            improving accessibility and usability.</p>
+                        <pre><code>@media (min-width: 480px) {} /* Small devices */
+@media (min-width: 768px) {} /* Tablets */
+@media (min-width: 1024px) {} /* Laptops */
+@media (min-width: 1280px) {} /* Desktops */
+@media (min-width: 1440px) {} /* Larger desktops */
+@media (min-width: 1920px) {} /* Full HD screens */
+@media (min-width: 2560px) {} /* 2K+ screens */</code></pre>
+                        <h3>Best Practices for Using Media Queries</h3>
+                        <ul>
+                            <li>
+                                <p><span style="font-weight: 600;">Use a Mobile-First Approach</span> - Define base styles for small screens, then add media queries for larger devices.</p>
+                            </li>
+                            <li>
+                                <p><span style="font-weight: 600;">Choose Logical Breakpoints</span> - Use common screen widths (e.g., 768px for tablets, 1024px for desktops) rather than device-specific values.</p>
+                            </li>
+                            <li>
+                                <p><span style="font-weight: 600;">Limit the Number of Queries</span> - Too many breakpoints can make maintenance difficult. Focus on major size changes.</p>
+                            </li>
+                            <li>
+                                <p><span style="font-weight: 600;">Use Relative Units</span> - Use <span><code>em</code></span> or <span><code>rem</code></span> for breakpoints when possible to adapt to user settings.</p>
+                            </li>
+                            <li>
+                                <p><span style="font-weight: 600;">Test Across Devices</span> - Use browser dev tools and real devices to check responsiveness.</p>
+                            </li>
+                        </ul>
+                        <h3>Modern Approaches to Responsive Design</h3>
+                        <p>While media queries are crucial, modern techniques like CSS Grid, Flexbox, and container queries are also shaping responsive design. Fluid typography using clamp() and CSS variables allow for more flexibility without excessive breakpoints. These methods help create dynamic layouts that adapt naturally to different screen sizes.</p>
+                        <p>By combining media queries with flexible layouts and scalable elements, HTML website builders can achieve a responsive design that works across all devices. A well-structured approach ensures content remains readable, layouts stay balanced, and users have a smooth browsing experience on any screen.</p>
+
                     </section>
                     <section class="advertisement__container">
                         <div class="advertisement">Advertisement</div>
                     </section>
                     <section id="section4">
                         <h2>Ad Sizes</h2>
-                        <p></p>
+                        <p>Google AdSense is a popular advertising program that allows website owners to earn money by
+                            displaying ads. It seamlessly integrates with HTML websites, making it an excellent choice
+                            for developers and site builders looking to monetise their content. AdSense automatically
+                            matches relevant ads to your site's content and audience, maximising engagement and revenue.
+                            With a variety of ad formats, including responsive and fixed-size ads, you can easily
+                            incorporate ads into your layout without disrupting the user experience. Whether you’re
+                            building a business site, blog, or portfolio, strategic ad placement can enhance
+                            monetisation while maintaining a clean and professional design.</p>
+                        <h3>Responsive and Popular Google AdSense Ad Sizes</h3>
+                        <h4>Responsive Ads </h4>
+                        <ul>
+                            <li>
+                                <p>Automatically adjust to fit screen sizes and layouts.</p>
+                            </li>
+                            <li>
+                                <p>Ideal for mobile-friendly designs and modern websites.</p>
+                            </li>
+                        </ul>
+                        <h4>Most Popular Fixed Ad Sizes</h4>
+                        <ul>
+                            <li>
+                                <p>300 x 250 Medium Rectangle</p>
+                            </li>
+                            <li>
+                                <p>336 x 280 Medium Rectangle</p>
+                            </li>
+                            <li>
+                                <p>728 x 90 Leaderboard</p>
+                            </li>
+                            <li>
+                                <p>300 x 600 Half Page</p>
+                            </li>
+                            <li>
+                                <p>160 x 600 Wide Skyscraper</p>
+                            </li>
+                            <li>
+                                <p>320 x 50 Mobile Banner</p>
+                            </li>
+                            <li>
+                                <p>970 x 250 Billboard</p>
+                            </li>
+                            <li>
+                                <p>250 x 250 Square</p>
+                            </li>
+                        </ul>
+                        <h3>Choosing Between Responsive and Fixed-Size Ads</h3>
+                        <p>Responsive ads are the best choice for websites that need flexibility across different screen
+                            sizes, ensuring a smooth user experience. They adapt automatically, reducing the need for
+                            manual adjustments. On the other hand, fixed-size ads give you more control over placement
+                            and design, making them ideal for specific layouts.</p>
+                        <p>For maximum revenue and user engagement, a combination of responsive and fixed-size ads can
+                            be beneficial. Test different placements to find what works best for your audience and
+                            website layout.</p>
+
+
+
+
+
                     </section>
                     <section id="section5">
                         <h2>Favicon</h2>
@@ -958,14 +1053,7 @@
 </html>
 
 
-<!-- media (min-width: 475px) {}  -->
-<!-- media (min-width: 640px) {}  -->
-<!-- media (min-width: 768px) {}  -->
-<!-- media (min-width: 1024px) {} -->
-<!-- media (min-width: 1280px) {} -->
-<!-- media (min-width: 1536px) {} -->
-<!-- media (min-width: 1920px) {} -->
-<!-- media (min-width: 2560px) {} -->
+
 
 
 
