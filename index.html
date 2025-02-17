@@ -232,8 +232,6 @@
         code {
             font-family: monospace;
             font-size: var(--fontsize-small);
-            /* line-height: var(--lineheight-body); */
-            /* letter-spacing: var(--letterspacing-body); */
         }
 
         span code {
@@ -243,6 +241,7 @@
             padding-left: 0.3rem;
             padding-right: 0.3rem;
             font-size: inherit;
+            color: var(--clr-shade-dark);
         }
 
         section {
@@ -870,24 +869,38 @@
                         <h3>Best Practices for Using Media Queries</h3>
                         <ul>
                             <li>
-                                <p><span style="font-weight: 600;">Use a Mobile-First Approach</span> - Define base styles for small screens, then add media queries for larger devices.</p>
+                                <p><span style="font-weight: 600;">Use a Mobile-First Approach</span> - Define base
+                                    styles for small screens, then add media queries for larger devices.</p>
                             </li>
                             <li>
-                                <p><span style="font-weight: 600;">Choose Logical Breakpoints</span> - Use common screen widths (e.g., 768px for tablets, 1024px for desktops) rather than device-specific values.</p>
+                                <p><span style="font-weight: 600;">Choose Logical Breakpoints</span> - Use common screen
+                                    widths (e.g., 768px for tablets, 1024px for desktops) rather than device-specific
+                                    values.</p>
                             </li>
                             <li>
-                                <p><span style="font-weight: 600;">Limit the Number of Queries</span> - Too many breakpoints can make maintenance difficult. Focus on major size changes.</p>
+                                <p><span style="font-weight: 600;">Limit the Number of Queries</span> - Too many
+                                    breakpoints can make maintenance difficult. Focus on major size changes.</p>
                             </li>
                             <li>
-                                <p><span style="font-weight: 600;">Use Relative Units</span> - Use <span><code>em</code></span> or <span><code>rem</code></span> for breakpoints when possible to adapt to user settings.</p>
+                                <p><span style="font-weight: 600;">Use Relative Units</span> - Use
+                                    <span><code>em</code></span> or <span><code>rem</code></span> for breakpoints when
+                                    possible to adapt to user settings.
+                                </p>
                             </li>
                             <li>
-                                <p><span style="font-weight: 600;">Test Across Devices</span> - Use browser dev tools and real devices to check responsiveness.</p>
+                                <p><span style="font-weight: 600;">Test Across Devices</span> - Use browser dev tools
+                                    and real devices to check responsiveness.</p>
                             </li>
                         </ul>
                         <h3>Modern Approaches to Responsive Design</h3>
-                        <p>While media queries are crucial, modern techniques like CSS Grid, Flexbox, and container queries are also shaping responsive design. Fluid typography using clamp() and CSS variables allow for more flexibility without excessive breakpoints. These methods help create dynamic layouts that adapt naturally to different screen sizes.</p>
-                        <p>By combining media queries with flexible layouts and scalable elements, HTML website builders can achieve a responsive design that works across all devices. A well-structured approach ensures content remains readable, layouts stay balanced, and users have a smooth browsing experience on any screen.</p>
+                        <p>While media queries are crucial, modern techniques like CSS Grid, Flexbox, and container
+                            queries are also shaping responsive design. Fluid typography using clamp() and CSS variables
+                            allow for more flexibility without excessive breakpoints. These methods help create dynamic
+                            layouts that adapt naturally to different screen sizes.</p>
+                        <p>By combining media queries with flexible layouts and scalable elements, HTML website builders
+                            can achieve a responsive design that works across all devices. A well-structured approach
+                            ensures content remains readable, layouts stay balanced, and users have a smooth browsing
+                            experience on any screen.</p>
 
                     </section>
                     <section class="advertisement__container">
@@ -964,7 +977,51 @@
                     </section>
                     <section id="section7">
                         <h2>robots.txt</h2>
-                        <p></p>
+                        <p>The <span><code>robots.txt</code></span> file helps search engines understand which parts of
+                            a website should or
+                            shouldn't be crawled. By setting rules for web crawlers, website owners can prevent search
+                            engines from indexing unnecessary pages, such as admin areas or duplicate content. A
+                            well-structured <span><code>robots.txt</code></span> ensures that search engines prioritise
+                            valuable content while
+                            improving crawl efficiency. The file must be named exactly
+                            <span><code>robots.txt</code></span> in lowercase and
+                            placed in the root directory (e.g., example.com/robots.txt) for search engines to find and
+                            follow its instructions. It's also commonly used to specify the sitemap location, making it
+                            easier for search engines to index key pages.
+                        </p>
+                        <pre><code>User-Agent: *  
+Disallow: /admin/  
+Disallow: /private/  
+Allow: /public-content/  
+Sitemap: https://www.example.com/sitemap.xml</code></pre>
+                        <h3>How robots.txt Helps with SEO</h3>
+                        <p>Search engines have limited resources when crawling websites, so it's essential to guide them
+                            efficiently. Using <span><code>Disallow</code></span>, website owners can prevent bots from
+                            wasting crawl budget on
+                            pages that don't need indexing, such as login pages or internal files. The
+                            <span><code>Sitemap</code></span> directive
+                            further improves SEO by helping search engines locate and index important pages faster.
+                        </p>
+                        <p>However, disallowing a page in robots.txt does not stop search engines from discovering it
+                            through internal links. If a page should not appear in search results, use the following
+                            meta robots tag in the <span><code>&lt;head&gt;</code></span> section of the page:
+                        </p>
+                        <pre><code>
+&lt;meta name="robots" content="noindex, nofollow"&gt;
+                        </code></pre>
+                        <p>The <span><code>noindex</code></span> directive prevents search engines from adding the page
+                            to their index, while
+                            <span><code>nofollow</code></span> ensures that links on the page are not followed. This is
+                            especially useful for
+                            private content, thank-you pages, or duplicate pages that should not appear in search
+                            results.
+                        </p>
+                        <p>While <span><code>robots.txt</code></span> is a powerful tool, it does not provide
+                            security as users can still access disallowed pages if they have a direct URL. For sensitive
+                            content, always use proper authentication rather than relying on robots.txt alone. Also,
+                            incorrect rules can block critical pages from search results, so always test your file using
+                            Google Search Console to ensure search engines can access your important content.</p>
+
                     </section>
                     <section id="section8">
                         <h2>Accessibility</h2>
