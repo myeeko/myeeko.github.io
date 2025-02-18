@@ -12,6 +12,8 @@
 - [x] head section: meta tags
 - [x] head section: description
 - [x] article - headtags
+- [ ] article - CSS reset
+- [ ] article - simple navbar
 - [x] article - colour assist
 - [x] article - media query
 - [x] article - ad sizes
