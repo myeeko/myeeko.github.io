@@ -1,8 +1,7 @@
 # Myeeko
-- [x] Complete a hero section
-- [x] Complete a about section
-- [x] Complete a footer section
-- [x] Complete a first article section
+- [ ] Complete a hero section
+- [ ] Complete a about section
+- [ ] Complete a footer section
 - [x] Make a README.md
 - [x] add colour
 - [x] responsive menu
@@ -11,35 +10,12 @@
 - [x] head section: favicon
 - [x] head section: meta tags
 - [x] head section: description
-- [x] article - headtags
-- [ ] article - CSS reset
-- [ ] article - simple navbar
-- [x] article - colour assist
-- [x] article - media query
-- [x] article - ad sizes
-- [ ] article - favicon - favicon.io (roboto serif - 600)
-- [ ] article - what goes in robots.txt
-- [ ] article - what goes in sitemap.xml
-- [ ] article - lighthouse accessibility
-- [ ] article - https://www.minifier.org/
-- [ ] article - Markdown
-- [ ] article - .htaccess
-- [ ] article - privacy policy
-- [ ] upload to google search for BOTs
+- [ ] simple link to websites
 - [ ] accessibility - lighthouse
 - [ ] robots.txt
 - [ ] sitemap.xml
 - [ ] .htaccess
-- [ ] privacy policy
----
 
-![image](https://github.com/user-attachments/assets/54ea891c-8de2-4c0a-94b2-cde72423443e)
-
-https://pagespeed.web.dev/
-
-https://webaim.org/resources/contrastchecker/
-
----
 
 ### About Myeeko
 Myeeko is a dynamic hub for innovative web development, bringing together creative ideas and functional design under one umbrella. As a small startup, we focus on building engaging, scalable websites that showcase clean development and continuous improvement. Each project under Myeeko is an opportunity to refine skills, explore new technologies, and deliver meaningful digital experiences.
