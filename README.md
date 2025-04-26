@@ -1,30 +1,15 @@
 # Myeeko
-- [ ] Complete a hero section
-- [ ] Complete a about section
-- [ ] Complete a footer section
-- [x] Make a README.md
-- [x] add colour
-- [x] responsive menu
-- [x] standardised font sizing
-- [x] standardised colour variables
-- [x] head section: favicon
-- [x] head section: meta tags
-- [x] head section: description
-- [ ] simple link to websites
-- [ ] accessibility - lighthouse
-- [ ] robots.txt
-- [ ] sitemap.xml
-- [ ] .htaccess
-
 
 ### About Myeeko
-Myeeko is a dynamic hub for innovative web development, bringing together creative ideas and functional design under one umbrella. As a small startup, we focus on building engaging, scalable websites that showcase clean development and continuous improvement. Each project under Myeeko is an opportunity to refine skills, explore new technologies, and deliver meaningful digital experiences.
+Welcome to my GitHub profile! 🎉 This is where I share my coding adventures and projects. You'll find a mix of personal projects and collaborations. I update this when i feel inspired so regular updates are a bit of a hit and miss. 
 
-Our approach to web development is centered around usability, performance, and adaptability. Whether crafting sleek landing pages, interactive platforms, or content-rich websites, we emphasize scalable solutions that grow with evolving needs. By leveraging modern web technologies, we ensure efficient, high-quality builds that balance aesthetics with functionality.
+I'm particularly interested in:
+* HMTL
+* CSS
+* Javascript
+* Python
 
-Myeeko, we believe a well-structured website is more than just a digital presence - it's a tool for connection, innovation, and long-term growth. Our projects are designed with SEO best practices in mind, enhancing visibility and reach while delivering a seamless user experience. Through thoughtful coding and strategic optimization, we aim to create websites that are not only visually appealing but also discoverable and impactful.
-
-As we continue expanding our portfolio, Myeeko remains committed to pushing the boundaries of web development, embracing new challenges, and building scalable solutions that stand the test of time.
+You'll see examples of that in several of my repositories. The projects here are a mix of polished finished products and works in progress, both being valuable parts of my learning journey. ✨
 
 Kind Regards,
 
