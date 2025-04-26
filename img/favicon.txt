@@ -1,8 +1,0 @@
-This favicon was generated using the following font:
-
-- Font Title: Roboto Serif
-- Font Weight: 600
-- Text: Lower Case m
-- Shape: Square
-- Background: #000
-- Forsground: #fff
