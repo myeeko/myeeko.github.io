@@ -4,10 +4,13 @@
 - [x] readme.md
 - [x] index.html
 - [x] head tags
-- [ ] favicon.ico
+- [x] favicon.ico
 - [x] optimise css
 - [x] robots.txt
 - [x] sitemap.xml
+- [ ] accessibility
+
+![alt text](image.png)
 
 
 ### About Myeeko :tada:
