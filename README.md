@@ -14,7 +14,9 @@
 
 
 ### About Myeeko :tada:
-Welcome to my GitHub profile! This is where I share my coding adventures and projects. You'll find a mix of personal projects and collaborations. I update this when i feel inspired so regular updates are a bit of a hit and miss. 
+Welcome to my GitHub profile!
+
+This is where I share my coding adventures and projects. You'll find a mix of personal projects and collaborations. I update this when i feel inspired so regular updates are a bit of a hit and miss. 
 
 I'm particularly interested in:
 * HMTL
