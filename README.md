@@ -10,7 +10,7 @@
 - [x] sitemap.xml
 - [ ] accessibility
 
-![alt text](image.png)
+![results of performance, accessibility, best practices, seo](pagespeed.png)
 
 
 ### About Myeeko :tada:
